@@ -1,0 +1,10 @@
+---
+source: tests/integration_cli.rs
+expression: overrides
+---
+[
+    "global/redownload=true",
+    "global/reextract=true",
+    "task/enabled=false",
+    "super:task/enabled=true",
+]

@@ -1,0 +1,6 @@
+---
+source: src/task/tasks/usvfs/tests.rs
+expression: "serde_json::json!({\n    \"name\": task.name(), \"version\": UsvfsTask::version(&config),\n})"
+---
+name: usvfs
+version: master

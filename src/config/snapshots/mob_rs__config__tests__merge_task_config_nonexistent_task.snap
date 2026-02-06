@@ -1,0 +1,6 @@
+---
+source: src/config/tests.rs
+expression: "serde_json::json!({\n    \"git_shallow\": nonexistent_config.git_clone.git_shallow, \"mo_org\":\n    nonexistent_config.mo_org,\n})"
+---
+git_shallow: true
+mo_org: DefaultOrg

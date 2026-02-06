@@ -1,0 +1,10 @@
+---
+source: tests/integration_git.rs
+expression: remotes_after_add
+---
+- - origin
+  - "https://github.com/test/repo.git"
+  - fetch
+- - origin
+  - "https://github.com/test/repo.git"
+  - push

@@ -1,0 +1,5 @@
+---
+source: src/task/tools/cmake/tests.rs
+expression: normalize_dry_run_logs(&logs)
+---
+ [dry-run] Would install with CMake build=Some("/tmp/build") configuration=Some(RelWithDebInfo) preset=None prefix=Some("/tmp/install")

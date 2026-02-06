@@ -1,0 +1,10 @@
+---
+source: src/utility/encoding/tests.rs
+expression: "vec![(\"phase1_after_line1\", lines1), (\"phase2_after_line2_partial\", lines2),\n(\"phase3_finish\", lines3),]"
+---
+- - phase1_after_line1
+  - - line1
+- - phase2_after_line2_partial
+  - - line2
+- - phase3_finish
+  - - partial

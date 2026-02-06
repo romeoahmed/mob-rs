@@ -1,0 +1,22 @@
+---
+source: src/task/tools/msbuild/tests.rs
+expression: platforms
+---
+[
+    (
+        "explicit ARM64 overrides x64 arch",
+        "ARM64",
+    ),
+    (
+        "x86 arch maps to Win32",
+        "Win32",
+    ),
+    (
+        "x64 arch maps to x64",
+        "x64",
+    ),
+    (
+        "default is x64",
+        "x64",
+    ),
+]

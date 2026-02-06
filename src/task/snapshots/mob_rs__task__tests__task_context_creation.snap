@@ -1,0 +1,9 @@
+---
+source: src/task/tests.rs
+expression: "serde_json::json!({\n    \"dry_run\": ctx.is_dry_run(), \"do_clean\": ctx.phases().do_clean(),\n    \"do_fetch\": ctx.phases().do_fetch(), \"do_build\": ctx.phases().do_build(),\n    \"clean_flags_empty\": ctx.clean_flags().is_empty(),\n})"
+---
+clean_flags_empty: true
+do_build: true
+do_clean: false
+do_fetch: true
+dry_run: false

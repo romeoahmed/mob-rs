@@ -1,0 +1,10 @@
+---
+source: src/task/registry/tests.rs
+expression: result
+---
+- cmake
+- modorganizer
+- modorganizer-archive
+- modorganizer-plugins
+- python
+- usvfs

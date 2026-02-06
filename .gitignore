@@ -1,0 +1,11 @@
+# Rust/Cargo build files
+/target
+
+# oh-my-opencode files
+/.sisyphus
+
+# JetBrains IDE files
+/.idea
+
+# VS Code files
+/.vscode

@@ -1,0 +1,42 @@
+---
+source: tests/integration_release.rs
+expression: cli
+---
+Cli {
+    global: GlobalOptions {
+        inis: [],
+        dry: false,
+        log_level: None,
+        file_log_level: None,
+        log_file: None,
+        prefix: None,
+        options: [],
+        no_default_inis: false,
+    },
+    command: Some(
+        Release(
+            ReleaseArgs {
+                mode: Official(
+                    OfficialArgs {
+                        branch: "v2.5.0",
+                        output_dir: None,
+                        outputs: OfficialOutputArgs {
+                            bin: BinaryOutputArgs {
+                                bin: true,
+                                no_bin: false,
+                            },
+                            pdbs: PdbOutputArgs {
+                                pdbs: true,
+                                no_pdbs: false,
+                            },
+                            installer: OfficialInstallerArgs {
+                                no_installer: false,
+                            },
+                        },
+                        force: true,
+                    },
+                ),
+            },
+        ),
+    ),
+}

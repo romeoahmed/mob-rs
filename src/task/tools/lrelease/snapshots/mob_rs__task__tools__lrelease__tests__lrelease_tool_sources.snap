@@ -1,0 +1,14 @@
+---
+source: src/task/tools/lrelease/tests.rs
+expression: tool
+---
+LreleaseTool {
+    project: None,
+    sources: [
+        "/a.ts",
+        "/b.ts",
+        "/c.ts",
+    ],
+    output_dir: None,
+    lrelease_binary: None,
+}

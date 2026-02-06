@@ -1,0 +1,7 @@
+---
+source: src/task/tasks/translations/tests.rs
+expression: "parse_project_name(\".suffix\")"
+---
+Some(
+    "suffix",
+)

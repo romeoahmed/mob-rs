@@ -1,0 +1,10 @@
+---
+source: tests/integration_git.rs
+expression: remotes_after_rename
+---
+- - upstream
+  - "https://github.com/test/repo.git"
+  - fetch
+- - upstream
+  - "https://github.com/test/repo.git"
+  - push

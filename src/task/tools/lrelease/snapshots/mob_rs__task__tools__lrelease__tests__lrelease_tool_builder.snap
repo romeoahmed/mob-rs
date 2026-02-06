@@ -1,0 +1,17 @@
+---
+source: src/task/tools/lrelease/tests.rs
+expression: tool
+---
+LreleaseTool {
+    project: Some(
+        "modorganizer",
+    ),
+    sources: [
+        "/path/to/fr.ts",
+        "/path/to/gamebryo/fr.ts",
+    ],
+    output_dir: Some(
+        "/install/bin/translations",
+    ),
+    lrelease_binary: None,
+}

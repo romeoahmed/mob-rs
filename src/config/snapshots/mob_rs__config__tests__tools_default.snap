@@ -1,0 +1,7 @@
+---
+source: src/config/tests.rs
+expression: "serde_json::json!({\n    \"sevenz\": tools.sevenz, \"cmake\": tools.cmake, \"msbuild\": tools.msbuild,\n})"
+---
+cmake: cmake.exe
+msbuild: msbuild.exe
+sevenz: 7z.exe

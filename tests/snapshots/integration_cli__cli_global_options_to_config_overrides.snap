@@ -1,0 +1,11 @@
+---
+source: tests/integration_cli.rs
+expression: overrides
+---
+[
+    "custom/key=value",
+    "global/output_log_level=4",
+    "global/file_log_level=4",
+    "global/dry=true",
+    "paths/prefix=/build",
+]

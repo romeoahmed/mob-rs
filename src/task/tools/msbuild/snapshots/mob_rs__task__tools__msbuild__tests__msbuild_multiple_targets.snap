@@ -1,0 +1,17 @@
+---
+source: src/task/tools/msbuild/tests.rs
+expression: tool
+---
+MsBuildTool {
+    solution: None,
+    targets: [
+        "Build",
+        "Test",
+    ],
+    properties: {},
+    configuration: None,
+    platform: None,
+    architecture: None,
+    max_cpu_count: false,
+    operation: Build,
+}

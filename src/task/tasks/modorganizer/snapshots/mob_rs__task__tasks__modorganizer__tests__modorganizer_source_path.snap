@@ -1,0 +1,5 @@
+---
+source: src/task/tasks/modorganizer/tests.rs
+expression: path
+---
+"/test/build\\modorganizer-archive"

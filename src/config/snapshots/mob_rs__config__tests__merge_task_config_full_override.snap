@@ -1,0 +1,7 @@
+---
+source: src/config/tests.rs
+expression: "serde_json::json!({\n    \"git_shallow\": full_config.git_clone.git_shallow, \"mo_org\":\n    full_config.mo_org, \"mo_branch\": full_config.mo_branch,\n})"
+---
+git_shallow: false
+mo_branch: custom_branch
+mo_org: CustomOrg

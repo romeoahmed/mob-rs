@@ -1,0 +1,6 @@
+---
+source: src/task/tasks/installer/tests.rs
+expression: cases
+---
+- installer
+- installer

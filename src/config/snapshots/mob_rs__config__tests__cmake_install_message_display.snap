@@ -1,0 +1,10 @@
+---
+source: src/config/tests.rs
+expression: "vec![(\"Always\", CmakeInstallMessage::Always.to_string()),\n(\"Lazy\", CmakeInstallMessage::Lazy.to_string()),\n(\"Never\", CmakeInstallMessage::Never.to_string()),]"
+---
+- - Always
+  - ALWAYS
+- - Lazy
+  - LAZY
+- - Never
+  - NEVER

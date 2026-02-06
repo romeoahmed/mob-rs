@@ -1,0 +1,10 @@
+---
+source: src/config/tests.rs
+expression: "vec![(\"level_0_valid\", LogLevel::new(0).is_ok()),\n(\"level_6_valid\", LogLevel::new(6).is_ok()),\n(\"level_7_invalid\", LogLevel::new(7).is_err()),]"
+---
+- - level_0_valid
+  - true
+- - level_6_valid
+  - true
+- - level_7_invalid
+  - true

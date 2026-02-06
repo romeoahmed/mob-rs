@@ -1,0 +1,9 @@
+---
+source: src/task/tests.rs
+expression: phases
+---
+[
+    Clean,
+    Fetch,
+    BuildAndInstall,
+]

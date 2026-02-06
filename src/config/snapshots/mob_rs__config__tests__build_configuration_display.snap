@@ -1,0 +1,10 @@
+---
+source: src/config/tests.rs
+expression: "vec![(\"Debug\", BuildConfiguration::Debug.to_string()),\n(\"Release\", BuildConfiguration::Release.to_string()),\n(\"RelWithDebInfo\", BuildConfiguration::RelWithDebInfo.to_string()),]"
+---
+- - Debug
+  - Debug
+- - Release
+  - Release
+- - RelWithDebInfo
+  - RelWithDebInfo

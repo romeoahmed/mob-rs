@@ -1,0 +1,10 @@
+---
+source: src/task/tools/downloader/tests.rs
+expression: tool
+---
+DownloaderTool {
+    urls: [],
+    output_file: None,
+    force: true,
+    operation: Download,
+}

@@ -1,0 +1,5 @@
+---
+source: src/task/tools/iscc/tests.rs
+expression: tool.name()
+---
+iscc

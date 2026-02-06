@@ -1,0 +1,17 @@
+---
+source: src/task/tools/git/tests.rs
+expression: tool
+---
+GitTool {
+    url: None,
+    path: Some(
+        "/tmp/repo",
+    ),
+    branch: None,
+    remote: None,
+    target: None,
+    shallow: false,
+    force: false,
+    recursive: true,
+    operation: SubmoduleUpdate,
+}

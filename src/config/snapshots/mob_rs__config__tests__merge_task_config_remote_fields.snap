@@ -1,0 +1,6 @@
+---
+source: src/config/tests.rs
+expression: "serde_json::json!({\n    \"remote_org\": remote_config.remote_setup.remote_org,\n    \"remote_no_push_upstream\":\n    remote_config.remote_setup.remote_no_push_upstream,\n})"
+---
+remote_no_push_upstream: false
+remote_org: MyOrg

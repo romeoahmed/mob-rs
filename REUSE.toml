@@ -1,0 +1,28 @@
+version = 1
+SPDX-PackageName = "mob-rs"
+SPDX-PackageDownloadLocation = "https://github.com/romeoahmed/mod-rs"
+
+[[annotations]]
+path = [
+  ".github/workflows/**.yaml",
+  "src/**/snapshots/**.snap",
+  "tests/**/snapshots/**.snap",
+  ".editorconfig",
+  ".gitattributes",
+  ".gitignore",
+  ".insta.yaml",
+  "dprint.json",
+  "mob.toml",
+  "AGENTS.md",
+  "README.md",
+  "Cargo.lock",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Romeo Ahmed"
+SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = "Cargo.toml"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Romeo Ahmed"
+SPDX-License-Identifier = "GPL-3.0-or-later"

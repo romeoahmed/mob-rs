@@ -1,0 +1,6 @@
+---
+source: tests/integration_config.rs
+expression: config.cmake
+---
+install_message: never
+host: x64

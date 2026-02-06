@@ -1,0 +1,10 @@
+---
+source: src/task/tasks/modorganizer/tests.rs
+expression: cases
+---
+- - archive
+  - archive
+  - modorganizer-archive
+- - modorganizer-uibase
+  - modorganizer-uibase
+  - modorganizer-uibase

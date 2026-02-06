@@ -1,0 +1,5 @@
+---
+source: src/error/tests.rs
+expression: err.to_string()
+---
+missing required config key 'prefix' in section '[global]'

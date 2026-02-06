@@ -1,0 +1,7 @@
+---
+source: src/task/registry/tests.rs
+expression: tasks
+---
+- task1
+- task2
+- task3

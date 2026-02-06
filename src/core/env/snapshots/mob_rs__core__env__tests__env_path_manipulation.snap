@@ -1,0 +1,14 @@
+---
+source: src/core/env/tests.rs
+expression: results
+---
+- - initial
+  - /usr/bin
+- - after_prepend
+  - /usr/local/bin;/usr/bin
+- - starts_with_local_bin
+  - "true"
+- - after_append
+  - /usr/local/bin;/usr/bin;/opt/bin
+- - ends_with_opt_bin
+  - "true"

@@ -1,0 +1,93 @@
+---
+source: tests/integration_config.rs
+expression: "serde_json::json!({\n    \"base_config\": config, \"usvfs_config\": config.task_config(\"usvfs\"),\n    \"cmake_config\": config.task_config(\"cmake_common\"), \"other_task_config\":\n    config.task_config(\"other_task\"),\n})"
+---
+base_config:
+  aliases: {}
+  cmake:
+    install_message: never
+  global:
+    dry: false
+    file_log_level: 5
+    ignore_uncommitted: false
+    log_file: mob.log
+    output_log_level: 3
+    redownload: false
+    reextract: false
+  paths: {}
+  task:
+    configuration: RelWithDebInfo
+    enabled: true
+    git_shallow: true
+    git_url_prefix: "https://github.com/"
+    mo_branch: master
+    mo_org: ModOrganizer2
+    no_pull: false
+    remote_no_push_upstream: false
+    remote_push_default_origin: false
+  tasks:
+    cmake_common:
+      configuration: Debug
+    usvfs:
+      configuration: Release
+      git_shallow: false
+  tools:
+    7z: 7z.exe
+    cmake: cmake.exe
+    iscc: ISCC.exe
+    lrelease: lrelease.exe
+    msbuild: msbuild.exe
+    tx: tx.exe
+  transifex:
+    configure: true
+    enabled: true
+    force: false
+    minimum: 60
+    project: mod-organizer-2
+    pull: true
+    team: mod-organizer-2-team
+    url: "https://app.transifex.com"
+  versions:
+    explorerpp: 1.4.0
+    sdk: 10.0.26100.0
+    ss_dark_mode_1809_6788: "3.0"
+    ss_fallout3_trosski: v1.11
+    ss_fallout4_trosski: v1.11
+    ss_morrowind_trosski: "1.1"
+    ss_paper_automata_6788: "3.2"
+    ss_paper_lad_6788: "7.2"
+    ss_paper_mono_6788: "3.2"
+    ss_skyrim_trosski: v1.1
+    ss_starfield_trosski: V1.11
+    usvfs: master
+    vs_toolset: "14.3"
+cmake_config:
+  configuration: Debug
+  enabled: true
+  git_shallow: true
+  git_url_prefix: "https://github.com/"
+  mo_branch: master
+  mo_org: ModOrganizer2
+  no_pull: false
+  remote_no_push_upstream: false
+  remote_push_default_origin: false
+other_task_config:
+  configuration: RelWithDebInfo
+  enabled: true
+  git_shallow: true
+  git_url_prefix: "https://github.com/"
+  mo_branch: master
+  mo_org: ModOrganizer2
+  no_pull: false
+  remote_no_push_upstream: false
+  remote_push_default_origin: false
+usvfs_config:
+  configuration: Release
+  enabled: true
+  git_shallow: false
+  git_url_prefix: "https://github.com/"
+  mo_branch: master
+  mo_org: ModOrganizer2
+  no_pull: false
+  remote_no_push_upstream: false
+  remote_push_default_origin: false

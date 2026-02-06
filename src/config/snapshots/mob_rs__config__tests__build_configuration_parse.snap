@@ -1,0 +1,12 @@
+---
+source: src/config/tests.rs
+expression: "vec![(\"debug\", format!(\"{:?}\", \"debug\".parse::<BuildConfiguration>())),\n(\"Release\", format!(\"{:?}\", \"Release\".parse::<BuildConfiguration>())),\n(\"relwithdebinfo\",\nformat!(\"{:?}\", \"relwithdebinfo\".parse::<BuildConfiguration>())),\n(\"invalid\",\nformat!(\"{:?}\", \"invalid\".parse::<BuildConfiguration>().is_err())),]"
+---
+- - debug
+  - Ok(Debug)
+- - Release
+  - Ok(Release)
+- - relwithdebinfo
+  - Ok(RelWithDebInfo)
+- - invalid
+  - "true"

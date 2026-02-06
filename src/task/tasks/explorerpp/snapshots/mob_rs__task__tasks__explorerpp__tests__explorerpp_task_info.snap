@@ -1,0 +1,6 @@
+---
+source: src/task/tasks/explorerpp/tests.rs
+expression: "serde_json::json!({\n    \"name\": task.name(), \"version\": ExplorerPPTask::version(&config),\n})"
+---
+name: explorerpp
+version: 1.4.0

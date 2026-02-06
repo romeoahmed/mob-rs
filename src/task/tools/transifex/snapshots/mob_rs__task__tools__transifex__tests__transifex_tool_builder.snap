@@ -1,0 +1,19 @@
+---
+source: src/task/tools/transifex/tests.rs
+expression: tool
+---
+TransifexTool {
+    root: Some(
+        "/path/to/tx",
+    ),
+    api_key: Some(
+        "secret",
+    ),
+    url: Some(
+        "https://example.com",
+    ),
+    minimum: 60,
+    force: true,
+    operation: Pull,
+    tx_binary: None,
+}

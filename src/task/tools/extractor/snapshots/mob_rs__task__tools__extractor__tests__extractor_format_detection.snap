@@ -1,0 +1,46 @@
+---
+source: src/task/tools/extractor/tests.rs
+expression: detections
+---
+[
+    (
+        "archive.7z",
+        Some(
+            SevenZip,
+        ),
+    ),
+    (
+        "archive.zip",
+        Some(
+            Zip,
+        ),
+    ),
+    (
+        "archive.tar.gz",
+        Some(
+            TarGz,
+        ),
+    ),
+    (
+        "archive.tgz",
+        Some(
+            TarGz,
+        ),
+    ),
+    (
+        "archive.tar",
+        Some(
+            Tar,
+        ),
+    ),
+    (
+        "ARCHIVE.ZIP (case-insensitive)",
+        Some(
+            Zip,
+        ),
+    ),
+    (
+        "archive.rar (unsupported)",
+        None,
+    ),
+]

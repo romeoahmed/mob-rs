@@ -1,0 +1,30 @@
+---
+source: src/logging/tests.rs
+expression: conversions
+---
+[
+    (
+        "from_int(0)",
+        LogLevel(
+            0,
+        ),
+    ),
+    (
+        "from_int(3)",
+        LogLevel(
+            3,
+        ),
+    ),
+    (
+        "from_int(5)",
+        LogLevel(
+            5,
+        ),
+    ),
+    (
+        "from_int(100)",
+        LogLevel(
+            6,
+        ),
+    ),
+]

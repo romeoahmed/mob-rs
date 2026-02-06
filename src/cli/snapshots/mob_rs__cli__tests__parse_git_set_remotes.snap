@@ -1,0 +1,32 @@
+---
+source: src/cli/tests.rs
+expression: cli
+---
+Cli {
+    global: GlobalOptions {
+        inis: [],
+        dry: false,
+        log_level: None,
+        file_log_level: None,
+        log_file: None,
+        prefix: None,
+        options: [],
+        no_default_inis: false,
+    },
+    command: Some(
+        Git(
+            GitArgs {
+                subcommand: SetRemotes(
+                    SetRemotesArgs {
+                        username: "myuser",
+                        email: "myemail@example.com",
+                        key: None,
+                        no_push: false,
+                        push_default: false,
+                        path: None,
+                    },
+                ),
+            },
+        ),
+    ),
+}

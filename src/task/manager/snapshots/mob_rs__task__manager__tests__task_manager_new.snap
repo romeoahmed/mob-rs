@@ -1,0 +1,8 @@
+---
+source: src/task/manager/tests.rs
+expression: "serde_json::json!({\n    \"task_count\": manager.task_count(), \"is_cancelled\":\n    manager.is_cancelled(), \"dry_run\": manager.is_dry_run(),\n    \"clean_flags_empty\": manager.clean_flags().is_empty(),\n})"
+---
+clean_flags_empty: true
+dry_run: false
+is_cancelled: false
+task_count: 0

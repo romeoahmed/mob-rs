@@ -1,0 +1,26 @@
+---
+source: src/task/tools/iscc/tests.rs
+expression: tool
+---
+IsccTool {
+    iss: Some(
+        "/path/to/script.iss",
+    ),
+    iscc_binary: None,
+    defines: [
+        (
+            "VERSION",
+            "1.0.0",
+        ),
+        (
+            "ARCH",
+            "x64",
+        ),
+    ],
+    output_dir: Some(
+        "/output",
+    ),
+    output_name: Some(
+        "MyInstaller",
+    ),
+}

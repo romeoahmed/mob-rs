@@ -1,0 +1,5 @@
+---
+source: src/core/process/tests.rs
+expression: output.exit_code().to_string()
+---
+42

@@ -1,0 +1,59 @@
+---
+source: tests/integration_cli.rs
+expression: cli
+---
+Cli {
+    global: GlobalOptions {
+        inis: [],
+        dry: false,
+        log_level: None,
+        file_log_level: None,
+        log_file: None,
+        prefix: None,
+        options: [
+            "versions/qt=6.7.0",
+            "global/dry=true",
+        ],
+        no_default_inis: false,
+    },
+    command: Some(
+        Build(
+            BuildArgs {
+                clean_download: CleanDownloadArgs {
+                    redownload: false,
+                    reextract: false,
+                },
+                clean_build: CleanBuildArgs {
+                    reconfigure: false,
+                    rebuild: false,
+                },
+                clean_full: CleanFullArgs {
+                    new_build: false,
+                },
+                clean_phase: CleanPhaseArgs {
+                    clean_task: false,
+                    no_clean_task: false,
+                },
+                fetch_phase: FetchPhaseArgs {
+                    fetch_task: false,
+                    no_fetch_task: false,
+                },
+                build_phase: BuildPhaseArgs {
+                    build_task: false,
+                    no_build_task: false,
+                },
+                pull_behavior: PullArgs {
+                    pull: false,
+                    no_pull: false,
+                },
+                revert_ts_behavior: RevertTsArgs {
+                    revert_ts: false,
+                    no_revert_ts: false,
+                },
+                ignore_uncommitted: false,
+                keep_msbuild: false,
+                tasks: [],
+            },
+        ),
+    ),
+}

@@ -1,0 +1,9 @@
+---
+source: tests/integration_task.rs
+expression: phase_names
+---
+[
+    "clean",
+    "fetch",
+    "build_and_install",
+]

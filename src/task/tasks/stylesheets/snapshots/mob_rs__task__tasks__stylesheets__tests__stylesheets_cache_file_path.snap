@@ -1,0 +1,5 @@
+---
+source: src/task/tasks/stylesheets/tests.rs
+expression: path
+---
+"/test/cache\\paper-light-and-dark.7z"

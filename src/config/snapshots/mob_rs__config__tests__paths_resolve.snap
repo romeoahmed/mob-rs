@@ -1,0 +1,8 @@
+---
+source: src/config/tests.rs
+expression: "serde_json::json!({\n    \"cache\": normalize(&paths.cache), \"build\": normalize(&paths.build),\n    \"install\": normalize(&paths.install), \"install_bin\":\n    normalize(&paths.install_bin),\n})"
+---
+build: /test/prefix/build
+cache: /test/prefix/downloads
+install: /test/prefix/install
+install_bin: /test/prefix/install/bin

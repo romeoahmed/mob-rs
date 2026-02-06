@@ -1,0 +1,7 @@
+---
+source: src/task/manager/tests.rs
+expression: counts
+---
+- 0
+- 1
+- 2

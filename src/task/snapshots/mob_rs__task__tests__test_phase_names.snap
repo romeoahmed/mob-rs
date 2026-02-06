@@ -1,0 +1,9 @@
+---
+source: src/task/tests.rs
+expression: names
+---
+[
+    "clean",
+    "fetch",
+    "build_and_install",
+]

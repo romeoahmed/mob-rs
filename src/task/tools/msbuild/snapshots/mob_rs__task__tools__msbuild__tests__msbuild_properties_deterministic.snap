@@ -1,0 +1,18 @@
+---
+source: src/task/tools/msbuild/tests.rs
+expression: tool
+---
+MsBuildTool {
+    solution: None,
+    targets: [],
+    properties: {
+        "PropA": "ValueA",
+        "PropB": "ValueB",
+        "PropC": "ValueC",
+    },
+    configuration: None,
+    platform: None,
+    architecture: None,
+    max_cpu_count: false,
+    operation: Build,
+}

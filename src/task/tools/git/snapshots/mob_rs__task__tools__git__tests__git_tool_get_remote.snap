@@ -1,0 +1,14 @@
+---
+source: src/task/tools/git/tests.rs
+expression: remotes
+---
+[
+    (
+        "default",
+        "origin",
+    ),
+    (
+        "custom upstream",
+        "upstream",
+    ),
+]

@@ -1,0 +1,7 @@
+---
+source: src/task/registry/tests.rs
+expression: result
+---
+- usvfs
+- modorganizer
+- cmake

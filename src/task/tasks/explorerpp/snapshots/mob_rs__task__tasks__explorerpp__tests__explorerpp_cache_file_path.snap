@@ -1,0 +1,5 @@
+---
+source: src/task/tasks/explorerpp/tests.rs
+expression: path
+---
+"/test/cache\\explorerpp_x64.zip"

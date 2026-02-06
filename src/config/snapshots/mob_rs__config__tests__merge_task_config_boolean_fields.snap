@@ -1,0 +1,6 @@
+---
+source: src/config/tests.rs
+expression: "serde_json::json!({\n    \"enabled\": bool_config.enabled, \"no_pull\":\n    bool_config.git_behavior.no_pull,\n})"
+---
+enabled: false
+no_pull: false

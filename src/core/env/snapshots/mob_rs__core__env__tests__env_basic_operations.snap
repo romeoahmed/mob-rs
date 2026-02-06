@@ -1,0 +1,10 @@
+---
+source: src/core/env/tests.rs
+expression: "vec![(\"get_FOO\", env.get(\"FOO\")),\n(\"get_foo_case_insensitive\", env.get(\"foo\")),\n(\"get_NOTEXIST\", env.get(\"NOTEXIST\")),]"
+---
+- - get_FOO
+  - bar
+- - get_foo_case_insensitive
+  - bar
+- - get_NOTEXIST
+  - ~

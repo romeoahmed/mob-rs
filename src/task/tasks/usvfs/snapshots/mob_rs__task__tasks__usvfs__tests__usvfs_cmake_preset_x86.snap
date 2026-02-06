@@ -1,0 +1,5 @@
+---
+source: src/task/tasks/usvfs/tests.rs
+expression: "UsvfsTask::cmake_preset(Arch::X86)"
+---
+vs2022-windows-x86

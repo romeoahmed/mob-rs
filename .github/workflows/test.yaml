@@ -1,0 +1,36 @@
+name: Test Suite
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  CARGO_TERM_COLOR: always
+  CARGO_INCREMENTAL: 0
+  CARGO_PROFILE_TEST_DEBUG: 0
+
+jobs:
+  ci:
+    name: Continuous Integration
+    runs-on: windows-2025-vs2026
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Rust Cache
+        uses: Swatinem/rust-cache@v2
+        with:
+          cache-on-failure: true
+
+      - name: Check Formatting
+        shell: pwsh
+        run: cargo fmt --all -- --check
+
+      - name: Clippy
+        shell: pwsh
+        run: cargo clippy --all -- -D warnings
+
+      - name: Run Tests
+        shell: pwsh
+        run: cargo test --all

@@ -1,0 +1,107 @@
+[package]
+name = "mob-rs"
+version = "0.1.0"
+authors = ["Romeo Ahmed <ahmedorqwn@gmail.com>"]
+categories = ["development-tools::build-utils"]
+edition = "2024"
+keywords = ["modorganizer", "build-tool"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+repository = "https://github.com/romeoahmed/mod-rs"
+rust-version = "1.92.0"
+description = "ModOrganizer Build Tool - Rust Port"
+
+[[bin]]
+name = "mob"
+path = "src/main.rs"
+
+[dependencies]
+# Error handling
+anyhow = "1.0.101"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.149"
+thiserror = "2.0.18"
+
+# Configuration
+config = { version = "0.15.19", default-features = false, features = ["toml"] }
+
+# CLI
+clap = { version = "4.5.57", features = ["derive", "env", "wrap_help"] }
+
+# Logging / Tracing
+tracing = "0.1.44"
+tracing-appender = "0.2.4"
+tracing-subscriber = { version = "0.3.22", default-features = false, features = ["ansi", "env-filter", "json"] }
+
+# Async runtime
+tokio = { version = "1.49", features = ["rt-multi-thread", "process", "io-util", "macros", "signal"] }
+tokio-util = { version = "0.7.18", features = ["rt"] }
+
+# Filesystem
+ignore = "0.4.25"
+tempfile = { version = "3.25.0", default-features = false }
+
+# Concurrency
+flume = { version = "0.12.0", default-features = false }
+
+# Encoding (legacy Windows code pages)
+encoding_rs = "0.8.35"
+
+# String utilities
+regex = { version = "1.12.3", default-features = false }
+wax = { version = "0.7.0", default-features = false }
+
+# Builder generation
+bon = "3.8.2"
+
+# Enum flags
+bitflags = "2.10.0"
+
+# Networking
+futures-util = "0.3.31"
+indicatif = "0.18.3"
+reqwest = { version = "0.13.2", features = ["json", "stream"] }
+
+# Git
+gix = { version = "0.78.0", default-features = false, features = ["index", "status", "revision"] }
+
+# Process management
+which = "8.0"
+
+# Memory allocator
+mimalloc = { version = "0.1.48", features = ["v3"] }
+
+# Win32 API bindings
+[target.'cfg(windows)'.dependencies.windows]
+version = "0.62.2"
+features = [
+  "Win32_Storage_FileSystem",
+  "Win32_System_Console",
+  "Win32_System_JobObjects",
+  "Win32_System_Threading",
+  "Win32_Security",
+]
+
+[dev-dependencies]
+insta = { version = "1.46.3", features = ["yaml", "redactions"] }
+wiremock = "0.6.5"
+
+[profile.dev.package.insta]
+opt-level = 3
+
+[profile.dev.package.similar]
+opt-level = 3
+
+[profile.release]
+lto = "thin"
+strip = "symbols"
+panic = "abort"
+
+[lints.rust]
+unreachable_pub = "warn"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+nursery = { level = "warn", priority = -1 }
+redundant_pub_crate = "allow"

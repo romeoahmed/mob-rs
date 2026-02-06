@@ -1,0 +1,55 @@
+---
+source: tests/integration_release.rs
+expression: cli
+---
+Cli {
+    global: GlobalOptions {
+        inis: [],
+        dry: false,
+        log_level: None,
+        file_log_level: None,
+        log_file: None,
+        prefix: None,
+        options: [],
+        no_default_inis: false,
+    },
+    command: Some(
+        Release(
+            ReleaseArgs {
+                mode: Devbuild(
+                    DevbuildArgs {
+                        outputs: ReleaseOutputArgs {
+                            bin: BinaryOutputArgs {
+                                bin: true,
+                                no_bin: false,
+                            },
+                            pdbs: PdbOutputArgs {
+                                pdbs: true,
+                                no_pdbs: false,
+                            },
+                            src: SrcOutputArgs {
+                                src: true,
+                                no_src: false,
+                            },
+                            installer: InstallerOutputArgs {
+                                installer: false,
+                                no_installer: false,
+                            },
+                        },
+                        version_source: VersionSourceArgs {
+                            version_from_exe: false,
+                            version_from_rc: false,
+                        },
+                        rc_path: Some(
+                            "/path/to/version.rc",
+                        ),
+                        version: None,
+                        output_dir: None,
+                        suffix: None,
+                        force: false,
+                    },
+                ),
+            },
+        ),
+    ),
+}

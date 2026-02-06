@@ -1,0 +1,6 @@
+---
+source: src/utility/fs/tests.rs
+expression: "serde_json::json!({\n    \"processed\": processed, \"callback_count\": count.load(Ordering::Relaxed),\n})"
+---
+callback_count: 2
+processed: 2

@@ -1,0 +1,7 @@
+---
+source: src/utility/fs/tests.rs
+expression: "serde_json::json!({\n    \"files_count\": result.files().len(), \"found_files\": file_names,\n})"
+---
+files_count: 1
+found_files:
+  - index.js

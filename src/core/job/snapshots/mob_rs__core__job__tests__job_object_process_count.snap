@@ -1,0 +1,6 @@
+---
+source: src/core/job/tests.rs
+expression: "serde_json::json!({ \"active\": active, \"total\": total, })"
+---
+active: 0
+total: 0

@@ -1,0 +1,5 @@
+---
+source: src/config/tests.rs
+expression: result.unwrap_err().to_string()
+---
+unknown field `unknown_section`, expected one of `global`, `cmake`, `aliases`, `task`, `tasks`, `tools`, `transifex`, `versions`, `paths`

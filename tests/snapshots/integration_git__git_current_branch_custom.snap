@@ -1,0 +1,5 @@
+---
+source: tests/integration_git.rs
+expression: branch
+---
+feature-branch

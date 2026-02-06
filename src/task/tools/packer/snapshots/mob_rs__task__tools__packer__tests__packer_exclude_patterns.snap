@@ -1,0 +1,8 @@
+---
+source: src/task/tools/packer/tests.rs
+expression: tool.exclude_patterns
+---
+[
+    "*.tmp",
+    "*.log",
+]

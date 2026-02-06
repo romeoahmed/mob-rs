@@ -1,0 +1,12 @@
+---
+source: src/task/tools/downloader/tests.rs
+expression: tool
+---
+DownloaderTool {
+    urls: [
+        "https://example.com/file.zip",
+    ],
+    output_file: None,
+    force: false,
+    operation: Download,
+}

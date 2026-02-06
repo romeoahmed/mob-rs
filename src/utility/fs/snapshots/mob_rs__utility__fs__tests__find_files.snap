@@ -1,0 +1,6 @@
+---
+source: src/utility/fs/tests.rs
+expression: "serde_json::json!({\n    \"count\": rust_files.len(), \"all_rs_extension\":\n    rust_files.iter().all(|p| p.extension().unwrap() == \"rs\"),\n})"
+---
+all_rs_extension: true
+count: 2

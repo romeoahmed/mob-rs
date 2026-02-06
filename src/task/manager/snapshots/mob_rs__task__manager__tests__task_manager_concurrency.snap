@@ -1,0 +1,5 @@
+---
+source: src/task/manager/tests.rs
+expression: "serde_json::json!({\n    \"available_permits\": manager.concurrency_semaphore().available_permits(),\n})"
+---
+available_permits: 4

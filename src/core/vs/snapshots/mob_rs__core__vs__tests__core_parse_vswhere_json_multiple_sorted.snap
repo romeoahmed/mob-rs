@@ -1,0 +1,22 @@
+---
+source: src/core/vs/tests.rs
+expression: result
+---
+[
+    VsInstallation {
+        instance_id: "new",
+        installation_path: "C:\\VS2022",
+        installation_version: "17.9.0.0",
+        display_name: "VS 2022",
+        is_complete: true,
+        is_prerelease: false,
+    },
+    VsInstallation {
+        instance_id: "old",
+        installation_path: "C:\\VS2019",
+        installation_version: "16.5.0.0",
+        display_name: "VS 2019",
+        is_complete: true,
+        is_prerelease: false,
+    },
+]

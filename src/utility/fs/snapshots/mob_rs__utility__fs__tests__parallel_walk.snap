@@ -1,0 +1,7 @@
+---
+source: src/utility/fs/tests.rs
+expression: "serde_json::json!({\n    \"files_count\": result.files().len(), \"directories_count\":\n    result.directories().len(), \"error_count\": result.error_count(),\n})"
+---
+directories_count: 2
+error_count: 0
+files_count: 2

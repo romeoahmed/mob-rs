@@ -1,0 +1,16 @@
+---
+source: src/cmd/release/tests.rs
+expression: cases
+---
+- - basic
+  - Mod.Organizer-2.5.0.7z
+- - with_suffix
+  - Mod.Organizer-2.5.0-rc1.7z
+- - with_what
+  - Mod.Organizer-2.5.0-pdbs.7z
+- - suffix_and_what
+  - Mod.Organizer-2.5.0-beta-src.7z
+- - empty_suffix_ignored
+  - Mod.Organizer-2.5.0-pdbs.7z
+- - empty_what_ignored
+  - Mod.Organizer-2.5.0-rc1.7z

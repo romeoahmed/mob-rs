@@ -1,0 +1,61 @@
+---
+source: tests/integration_config.rs
+expression: config
+---
+global:
+  dry: false
+  redownload: false
+  reextract: false
+  output_log_level: 3
+  file_log_level: 5
+  log_file: mob.log
+  ignore_uncommitted: false
+cmake:
+  install_message: never
+aliases:
+  plugins:
+    - plugin_*
+  super:
+    - modorganizer*
+    - usvfs
+task:
+  enabled: true
+  mo_org: ModOrganizer2
+  mo_branch: master
+  no_pull: false
+  configuration: RelWithDebInfo
+  git_url_prefix: "https://github.com/"
+  git_shallow: true
+  remote_no_push_upstream: false
+  remote_push_default_origin: false
+tools:
+  7z: 7z.exe
+  cmake: cmake.exe
+  msbuild: msbuild.exe
+  tx: tx.exe
+  lrelease: lrelease.exe
+  iscc: ISCC.exe
+transifex:
+  enabled: true
+  team: mod-organizer-2-team
+  project: mod-organizer-2
+  url: "https://app.transifex.com"
+  minimum: 60
+  force: false
+  configure: true
+  pull: true
+versions:
+  vs_toolset: "14.3"
+  sdk: 10.0.26100.0
+  usvfs: master
+  explorerpp: 1.4.0
+  ss_dark_mode_1809_6788: "3.0"
+  ss_fallout3_trosski: v1.11
+  ss_fallout4_trosski: v1.11
+  ss_morrowind_trosski: "1.1"
+  ss_paper_automata_6788: "3.2"
+  ss_paper_lad_6788: "7.2"
+  ss_paper_mono_6788: "3.2"
+  ss_skyrim_trosski: v1.1
+  ss_starfield_trosski: V1.11
+paths: {}

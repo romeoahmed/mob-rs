@@ -1,0 +1,9 @@
+---
+source: src/git/tests.rs
+expression: repo_names
+---
+[
+    "modorganizer",
+    "uibase",
+    "usvfs",
+]

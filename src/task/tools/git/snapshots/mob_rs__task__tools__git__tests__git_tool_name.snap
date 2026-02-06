@@ -1,0 +1,5 @@
+---
+source: src/task/tools/git/tests.rs
+expression: tool.name()
+---
+git

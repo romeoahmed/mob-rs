@@ -1,0 +1,8 @@
+---
+source: src/logging/tests.rs
+expression: results
+---
+- - with_tool
+  - "[cmake/process] "
+- - after_clear
+  - "[cmake] "

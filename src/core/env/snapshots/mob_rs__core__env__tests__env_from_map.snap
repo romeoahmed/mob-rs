@@ -1,0 +1,7 @@
+---
+source: src/core/env/tests.rs
+expression: "serde_json::json!({\n    \"KEY1\": env.get(\"KEY1\"), \"KEY2\": env.get(\"KEY2\"), \"len\": env.len(),\n})"
+---
+KEY1: value1
+KEY2: value2
+len: 2

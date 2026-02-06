@@ -1,0 +1,7 @@
+---
+source: src/core/vs/tests.rs
+expression: "serde_json::json!({\n    \"devshell_dll\": normalize(vs.devshell_dll()), \"msbuild_path\":\n    normalize(vs.msbuild_path()), \"devenv_path\": normalize(vs.devenv_path()),\n})"
+---
+devenv_path: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/devenv.exe"
+devshell_dll: "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/Microsoft.VisualStudio.DevShell.dll"
+msbuild_path: "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/MSBuild.exe"

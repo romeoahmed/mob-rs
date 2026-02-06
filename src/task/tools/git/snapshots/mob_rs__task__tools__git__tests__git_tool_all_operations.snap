@@ -1,0 +1,30 @@
+---
+source: src/task/tools/git/tests.rs
+expression: operations
+---
+[
+    (
+        "clone_op",
+        Clone,
+    ),
+    (
+        "pull_op",
+        Pull,
+    ),
+    (
+        "fetch_op",
+        Fetch,
+    ),
+    (
+        "checkout_op",
+        Checkout,
+    ),
+    (
+        "submodule_update_op",
+        SubmoduleUpdate,
+    ),
+    (
+        "reset_op",
+        Reset,
+    ),
+]

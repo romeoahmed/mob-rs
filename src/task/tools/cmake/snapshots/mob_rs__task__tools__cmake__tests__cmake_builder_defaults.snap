@@ -1,0 +1,18 @@
+---
+source: src/task/tools/cmake/tests.rs
+expression: tool
+---
+CmakeTool {
+    source_dir: None,
+    build_dir: None,
+    install_prefix: None,
+    generator: None,
+    architecture: None,
+    configuration: None,
+    definitions: {},
+    prefix_paths: [],
+    target: None,
+    targets: [],
+    preset: None,
+    operation: Configure,
+}

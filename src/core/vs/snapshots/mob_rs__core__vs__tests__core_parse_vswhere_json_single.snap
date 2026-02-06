@@ -1,0 +1,14 @@
+---
+source: src/core/vs/tests.rs
+expression: result
+---
+[
+    VsInstallation {
+        instance_id: "abc123",
+        installation_path: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community",
+        installation_version: "17.9.34728.123",
+        display_name: "Visual Studio Community 2022",
+        is_complete: true,
+        is_prerelease: false,
+    },
+]

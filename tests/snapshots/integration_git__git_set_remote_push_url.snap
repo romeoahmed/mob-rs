@@ -1,0 +1,10 @@
+---
+source: tests/integration_git.rs
+expression: remotes
+---
+- - origin
+  - "https://github.com/test/repo.git"
+  - fetch
+- - origin
+  - nopushurl
+  - push

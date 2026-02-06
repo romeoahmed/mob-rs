@@ -1,0 +1,204 @@
+# mob-rs Configuration File
+# This is the TOML configuration format for the Rust port of MOB.
+#
+# Configuration is loaded from multiple sources in order of priority:
+# 1. Built-in defaults
+# 2. Master mob.toml in the executable directory
+# 3. Files in MOBINI environment variable (semicolon-separated)
+# 4. mob.toml in current working directory
+# 5. Files specified via --config
+# 6. Command-line overrides (-s section.key=value)
+
+# =============================================================================
+# Global Options
+# =============================================================================
+[global]
+# Simulate filesystem operations without making changes
+dry = false
+
+# Force re-download of archives even if they exist
+redownload = false
+
+# Force re-extraction even if target directory exists
+reextract = false
+
+# Log level for stdout: 0=silent, 1=errors, 2=warnings, 3=info, 4=debug, 5=trace, 6=dump
+output_log_level = 3
+
+# Log level for file output
+file_log_level = 5
+
+# Path to log file (relative to prefix if not absolute)
+log_file = "mob.log"
+
+# Allow deleting directories with uncommitted git changes
+ignore_uncommitted = false
+
+# =============================================================================
+# CMake Options
+# =============================================================================
+[cmake]
+# CMAKE_INSTALL_MESSAGE value: "always", "lazy", or "never"
+install_message = "never"
+
+# Toolset host configuration (-T host=XXX), leave empty for default
+# host = ""
+
+# =============================================================================
+# Task Aliases
+# =============================================================================
+# Define shortcuts for groups of tasks
+[aliases]
+super = ["cmake_common", "modorganizer*", "githubpp"]
+plugins = [
+  "check_fnis",
+  "bsapacker",
+  "bsa_extractor",
+  "diagnose_basic",
+  "installer_*",
+  "plugin_python",
+  "preview_base",
+  "preview_bsa",
+  "tool_*",
+  "game_*",
+]
+
+# =============================================================================
+# Default Task Configuration
+# =============================================================================
+# These settings apply to all tasks unless overridden
+[task]
+# Whether this task is enabled
+enabled = true
+
+# GitHub organization for ModOrganizer projects
+mo_org = "ModOrganizer2"
+
+# Git branch to use
+mo_branch = "master"
+
+# Fallback branch if mo_branch doesn't exist (empty = disabled)
+# mo_fallback = ""
+
+# Don't pull if repo is already cloned
+no_pull = false
+
+# Build configuration: "Debug", "Release", or "RelWithDebInfo"
+configuration = "RelWithDebInfo"
+
+# Git URL prefix for cloning
+git_url_prefix = "https://github.com/"
+
+# Use shallow clones (--depth 1)
+git_shallow = true
+
+# Remote configuration for fork workflow
+# remote_org = ""
+remote_no_push_upstream = false
+remote_push_default_origin = false
+
+# =============================================================================
+# Task-Specific Overrides
+# =============================================================================
+# Override settings for specific tasks using [tasks.{task_name}]
+
+[tasks.super]
+# All ModOrganizer2 repos - use full history for development
+git_shallow = false
+
+[tasks.usvfs]
+# USVFS needs full history and Release build
+git_shallow = false
+configuration = "Release"
+
+[tasks.installer]
+# Installer is disabled by default
+enabled = false
+git_shallow = false
+
+[tasks.translations]
+enabled = true
+
+# =============================================================================
+# Tool Paths
+# =============================================================================
+# Tools are looked up in PATH by default. Specify full paths if needed.
+[tools]
+"7z" = "7z.exe"
+cmake = "cmake.exe"
+msbuild = "msbuild.exe"
+tx = "tx.exe"
+lrelease = "lrelease.exe"
+iscc = "ISCC.exe"
+
+# =============================================================================
+# Transifex Configuration
+# =============================================================================
+[transifex]
+enabled = true
+# API key - keep this secret!
+# key = ""
+team = "mod-organizer-2-team"
+project = "mod-organizer-2"
+url = "https://app.transifex.com"
+# Minimum translation completion percentage
+minimum = 60
+force = false
+configure = true
+pull = true
+
+# =============================================================================
+# Version Numbers
+# =============================================================================
+[versions]
+vs_toolset = "14.3"
+sdk = "10.0.26100.0"
+usvfs = "master"
+explorerpp = "1.4.0"
+
+# Stylesheet versions
+ss_paper_lad_6788 = "7.2"
+ss_paper_automata_6788 = "3.2"
+ss_paper_mono_6788 = "3.2"
+ss_dark_mode_1809_6788 = "3.0"
+ss_morrowind_trosski = "1.1"
+ss_skyrim_trosski = "v1.1"
+ss_starfield_trosski = "V1.11"
+ss_fallout3_trosski = "v1.11"
+ss_fallout4_trosski = "v1.11"
+
+# =============================================================================
+# Paths Configuration
+# =============================================================================
+# Most paths are derived from 'prefix' if not explicitly set.
+# Relative paths are resolved against prefix.
+[paths]
+# Main build directory - REQUIRED
+# prefix = "C:/dev/modorganizer"
+
+# Download cache (default: prefix/downloads)
+# cache = ""
+
+# Licenses directory
+# licenses = ""
+
+# Build directory (default: prefix/build)
+# build = ""
+
+# Installation directories (defaults derived from prefix/install)
+# install = ""
+# install_bin = ""
+# install_installer = ""
+# install_libs = ""
+# install_pdbs = ""
+# install_stylesheets = ""
+# install_licenses = ""
+# install_translations = ""
+
+# vcpkg path (from VCPKG_ROOT env var or auto-detected)
+# vcpkg = ""
+
+# Qt installation directory (e.g., "C:/Qt/6.10.2/msvc2022_64")
+# qt_install = ""
+# qt_bin = ""           # default: qt_install/bin
+# qt_translations = ""  # default: qt_install/translations

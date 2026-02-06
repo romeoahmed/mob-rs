@@ -1,0 +1,6 @@
+---
+source: src/task/tests.rs
+expression: "serde_json::json!({\n    \"children_empty\": parallel.children().is_empty(), \"task_name\":\n    task.name(),\n})"
+---
+children_empty: true
+task_name: parallel

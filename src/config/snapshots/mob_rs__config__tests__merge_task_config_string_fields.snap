@@ -1,0 +1,7 @@
+---
+source: src/config/tests.rs
+expression: "serde_json::json!({\n    \"mo_org\": string_config.mo_org, \"mo_branch\": string_config.mo_branch,\n    \"mo_fallback\": string_config.mo_fallback,\n})"
+---
+mo_branch: master
+mo_fallback: develop
+mo_org: CustomOrg

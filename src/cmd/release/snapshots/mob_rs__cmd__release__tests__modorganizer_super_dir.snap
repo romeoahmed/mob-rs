@@ -1,0 +1,5 @@
+---
+source: src/cmd/release/tests.rs
+expression: "result.to_string_lossy().replace('\\\\', \"/\")"
+---
+/mo2/build/modorganizer_super

@@ -1,0 +1,6 @@
+---
+source: src/task/tasks/translations/tests.rs
+expression: cases
+---
+- translations
+- translations

@@ -1,0 +1,8 @@
+---
+source: src/core/vs/tests.rs
+expression: vs.version_tuple()
+---
+- 17
+- 14
+- 36915
+- 13

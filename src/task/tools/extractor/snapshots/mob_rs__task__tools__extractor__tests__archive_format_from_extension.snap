@@ -1,0 +1,40 @@
+---
+source: src/task/tools/extractor/tests.rs
+expression: extensions
+---
+[
+    (
+        "test.7z",
+        Some(
+            SevenZip,
+        ),
+    ),
+    (
+        "test.zip",
+        Some(
+            Zip,
+        ),
+    ),
+    (
+        "test.tar.gz",
+        Some(
+            TarGz,
+        ),
+    ),
+    (
+        "test.tgz",
+        Some(
+            TarGz,
+        ),
+    ),
+    (
+        "test.tar",
+        Some(
+            Tar,
+        ),
+    ),
+    (
+        "test.rar (unsupported)",
+        None,
+    ),
+]

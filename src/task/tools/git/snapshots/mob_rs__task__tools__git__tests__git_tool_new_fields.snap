@@ -1,0 +1,21 @@
+---
+source: src/task/tools/git/tests.rs
+expression: tool
+---
+GitTool {
+    url: None,
+    path: Some(
+        "/tmp/repo",
+    ),
+    branch: None,
+    remote: Some(
+        "upstream",
+    ),
+    target: Some(
+        "v1.0.0",
+    ),
+    shallow: false,
+    force: true,
+    recursive: false,
+    operation: Clone,
+}

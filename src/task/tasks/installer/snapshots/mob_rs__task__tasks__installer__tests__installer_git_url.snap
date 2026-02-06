@@ -1,0 +1,5 @@
+---
+source: src/task/tasks/installer/tests.rs
+expression: url
+---
+https://github.com/ModOrganizer2modorganizer-Installer.git

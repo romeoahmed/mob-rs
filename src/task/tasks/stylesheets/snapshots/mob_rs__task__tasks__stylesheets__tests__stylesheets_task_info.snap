@@ -1,0 +1,6 @@
+---
+source: src/task/tasks/stylesheets/tests.rs
+expression: "serde_json::json!({ \"name\": task.name(), \"releases_count\": RELEASES.len(), })"
+---
+name: stylesheets
+releases_count: 9

@@ -1,0 +1,14 @@
+---
+source: src/git/tests.rs
+expression: branch_info
+---
+[
+    (
+        "repo1",
+        "default",
+    ),
+    (
+        "repo2",
+        "default",
+    ),
+]

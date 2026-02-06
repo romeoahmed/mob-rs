@@ -1,0 +1,12 @@
+---
+source: src/core/env/tests.rs
+expression: results
+---
+- - after_set
+  - initial
+- - after_append
+  - initial_appended
+- - after_prepend
+  - prepended_initial_appended
+- - after_replace
+  - replaced

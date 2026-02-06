@@ -1,0 +1,11 @@
+---
+source: src/task/tools/extractor/tests.rs
+expression: tool
+---
+ExtractorTool {
+    archive: None,
+    output_dir: None,
+    format: None,
+    force: false,
+    operation: Extract,
+}

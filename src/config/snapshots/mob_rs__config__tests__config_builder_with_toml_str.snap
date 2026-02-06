@@ -1,0 +1,5 @@
+---
+source: src/config/tests.rs
+expression: "serde_json::json!({ \"global.dry\": config.global.dry, })"
+---
+global.dry: true

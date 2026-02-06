@@ -1,0 +1,6 @@
+---
+source: src/config/tests.rs
+expression: loader.format_loaded_files()
+---
+- "1. [string] <string>"
+- "2. [string] <string>"

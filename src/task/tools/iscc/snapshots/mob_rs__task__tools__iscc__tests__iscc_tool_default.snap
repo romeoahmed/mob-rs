@@ -1,0 +1,11 @@
+---
+source: src/task/tools/iscc/tests.rs
+expression: tool
+---
+IsccTool {
+    iss: None,
+    iscc_binary: None,
+    defines: [],
+    output_dir: None,
+    output_name: None,
+}

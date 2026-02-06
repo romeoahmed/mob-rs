@@ -1,0 +1,6 @@
+---
+source: src/config/tests.rs
+expression: files
+---
+- - string
+  - "<string>"

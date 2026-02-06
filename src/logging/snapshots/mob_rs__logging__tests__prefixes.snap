@@ -1,0 +1,10 @@
+---
+source: src/logging/tests.rs
+expression: "vec![(\"task_only\", ctx_task_only.prefix()),\n(\"with_tool\", ctx_with_tool.prefix()), (\"empty\", ctx_empty.prefix()),]"
+---
+- - task_only
+  - "[cmake] "
+- - with_tool
+  - "[msbuild/process] "
+- - empty
+  - ""

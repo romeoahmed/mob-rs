@@ -1,0 +1,13 @@
+---
+source: src/task/manager/tests.rs
+expression: "&(manager.is_dry_run(), manager.phases().do_clean(), manager.clean_flags(),\nmanager.phases().do_fetch(), manager.phases().do_build(),)"
+---
+(
+    true,
+    true,
+    CleanFlags(
+        REBUILD,
+    ),
+    true,
+    true,
+)

@@ -1,0 +1,7 @@
+---
+source: src/config/tests.rs
+expression: "serde_json::json!({\n    \"git_shallow\": custom_config.git_clone.git_shallow, \"mo_org\":\n    custom_config.mo_org, \"no_pull\": custom_config.git_behavior.no_pull,\n})"
+---
+git_shallow: false
+mo_org: DefaultOrg
+no_pull: false

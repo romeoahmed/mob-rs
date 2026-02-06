@@ -1,0 +1,13 @@
+---
+source: src/task/tests.rs
+expression: "&(ctx.is_dry_run(), ctx.phases().do_clean(), ctx.phases().do_fetch(),\nctx.phases().do_build(), ctx.clean_flags(),)"
+---
+(
+    true,
+    true,
+    true,
+    true,
+    CleanFlags(
+        REBUILD,
+    ),
+)

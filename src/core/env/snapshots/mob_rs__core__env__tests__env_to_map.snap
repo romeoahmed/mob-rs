@@ -1,0 +1,6 @@
+---
+source: src/core/env/tests.rs
+expression: map
+---
+KEY1: value1
+KEY2: value2

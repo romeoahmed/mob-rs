@@ -1,0 +1,5 @@
+---
+source: src/task/tasks/licenses/tests.rs
+expression: path
+---
+"/test/install/bin/licenses"

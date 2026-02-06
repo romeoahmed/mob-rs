@@ -1,0 +1,8 @@
+---
+source: src/cmd/pr/tests.rs
+expression: results
+---
+- - modorganizer/123
+  - "Ok((Some(\"modorganizer\"), 123))"
+- - "456"
+  - "Ok((None, 456))"

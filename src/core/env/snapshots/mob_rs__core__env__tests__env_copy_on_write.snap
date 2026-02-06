@@ -1,0 +1,8 @@
+---
+source: src/core/env/tests.rs
+expression: "serde_json::json!({\n    \"env1_KEY1\": env1.get(\"KEY1\"), \"env1_KEY2\": env1.get(\"KEY2\"), \"env2_KEY1\":\n    env2.get(\"KEY1\"), \"env2_KEY2\": env2.get(\"KEY2\"),\n})"
+---
+env1_KEY1: value1
+env1_KEY2: ~
+env2_KEY1: value1
+env2_KEY2: value2

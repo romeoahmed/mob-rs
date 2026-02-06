@@ -1,0 +1,22 @@
+---
+source: src/task/tools/msbuild/tests.rs
+expression: tool
+---
+MsBuildTool {
+    solution: Some(
+        "solution.sln",
+    ),
+    targets: [
+        "Build",
+    ],
+    properties: {},
+    configuration: Some(
+        Release,
+    ),
+    platform: Some(
+        "x64",
+    ),
+    architecture: None,
+    max_cpu_count: true,
+    operation: Build,
+}

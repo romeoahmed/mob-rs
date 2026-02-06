@@ -1,0 +1,19 @@
+---
+source: src/task/tools/git/tests.rs
+expression: tool
+---
+GitTool {
+    url: None,
+    path: Some(
+        "/tmp/repo",
+    ),
+    branch: None,
+    remote: None,
+    target: Some(
+        "HEAD~1",
+    ),
+    shallow: false,
+    force: true,
+    recursive: true,
+    operation: Reset,
+}

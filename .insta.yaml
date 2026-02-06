@@ -1,0 +1,12 @@
+behavior:
+  require_full_match: true
+  output: "diff"
+
+test:
+  runner: "nextest"
+  runner_fallback: true
+  auto_review: true
+
+review:
+  include_ignored: false
+  warn_undiscovered: true

@@ -1,0 +1,8 @@
+---
+source: src/config/tests.rs
+expression: "serde_json::json!({\n    \"global.dry\": config.global.dry, \"global.output_log_level\":\n    config.global.output_log_level.as_u8(), \"task.mo_org\": config.task.mo_org,\n    \"task.configuration\": config.task.configuration.to_string(),\n})"
+---
+global.dry: false
+global.output_log_level: 3
+task.configuration: RelWithDebInfo
+task.mo_org: ModOrganizer2

@@ -1,0 +1,18 @@
+---
+source: src/task/tools/transifex/tests.rs
+expression: operations
+---
+[
+    (
+        "init",
+        Init,
+    ),
+    (
+        "config",
+        Config,
+    ),
+    (
+        "pull",
+        Pull,
+    ),
+]

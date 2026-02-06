@@ -1,0 +1,35 @@
+---
+source: src/cli/tests.rs
+expression: cli
+---
+Cli {
+    global: GlobalOptions {
+        inis: [],
+        dry: false,
+        log_level: None,
+        file_log_level: None,
+        log_file: None,
+        prefix: None,
+        options: [],
+        no_default_inis: false,
+    },
+    command: Some(
+        Tx(
+            TxArgs {
+                subcommand: Get(
+                    TxGetArgs {
+                        key: None,
+                        team: None,
+                        project: None,
+                        url: None,
+                        minimum: Some(
+                            80,
+                        ),
+                        force: false,
+                        path: "/path/to/tx",
+                    },
+                ),
+            },
+        ),
+    ),
+}

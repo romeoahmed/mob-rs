@@ -1,0 +1,5 @@
+---
+source: src/task/tools/cmake/tests.rs
+expression: normalize_dry_run_logs(&logs)
+---
+ [dry-run] Would configure CMake source=Some("/tmp/source") build=Some("/tmp/build") generator="Ninja" architecture="x64" preset=None definitions={"CMAKE_INSTALL_MESSAGE": "NEVER"}

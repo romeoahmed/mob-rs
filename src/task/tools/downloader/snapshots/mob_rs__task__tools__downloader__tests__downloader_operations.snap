@@ -1,0 +1,10 @@
+---
+source: src/task/tools/downloader/tests.rs
+expression: operations
+---
+- - download_op
+  - Download
+- - clean_op
+  - Clean
+- - default
+  - Download

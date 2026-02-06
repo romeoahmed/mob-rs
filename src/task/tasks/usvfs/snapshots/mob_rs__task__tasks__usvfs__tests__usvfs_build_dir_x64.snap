@@ -1,0 +1,5 @@
+---
+source: src/task/tasks/usvfs/tests.rs
+expression: x64_dir
+---
+"/test/build\\usvfs\\vsbuild64"
