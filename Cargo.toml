@@ -7,7 +7,7 @@ edition = "2024"
 keywords = ["modorganizer", "build-tool"]
 license = "GPL-3.0-or-later"
 readme = "README.md"
-repository = "https://github.com/romeoahmed/mod-rs"
+repository = "https://github.com/romeoahmed/mob-rs"
 rust-version = "1.92.0"
 description = "ModOrganizer Build Tool - Rust Port"
 

@@ -1,6 +1,6 @@
 version = 1
 SPDX-PackageName = "mob-rs"
-SPDX-PackageDownloadLocation = "https://github.com/romeoahmed/mod-rs"
+SPDX-PackageDownloadLocation = "https://github.com/romeoahmed/mob-rs"
 
 [[annotations]]
 path = [

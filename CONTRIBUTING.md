@@ -18,8 +18,8 @@ Optional (for running mob itself, not for developing it):
 ### Setup
 
 ```powershell
-git clone https://github.com/romeoahmed/mod-rs
-cd mod-rs
+git clone https://github.com/romeoahmed/mob-rs
+cd mob-rs
 cargo build
 ```
 
@@ -160,7 +160,7 @@ All three must pass for a PR to be merged.
 
 ## Reporting Issues
 
-Please use the [issue templates](https://github.com/romeoahmed/mod-rs/issues/new/choose) to report bugs or request features. Include:
+Please use the [issue templates](https://github.com/romeoahmed/mob-rs/issues/new/choose) to report bugs or request features. Include:
 
 - Your Rust version (`rustc --version`)
 - Your `mob` version or commit hash

@@ -42,8 +42,8 @@ If you want to contribute to a single plugin of MO2 or even write your own plugi
 rustup install stable
 
 # clone and build mob-rs
-git clone https://github.com/romeoahmed/mod-rs
-cd mod-rs
+git clone https://github.com/romeoahmed/mob-rs
+cd mob-rs
 cargo build --release
 
 # build MO2
