@@ -4,7 +4,8 @@ SPDX-PackageDownloadLocation = "https://github.com/romeoahmed/mod-rs"
 
 [[annotations]]
 path = [
-  ".github/workflows/**.yaml",
+  ".github/**/**.yaml",
+  ".github/**.md",
   "src/**/snapshots/**.snap",
   "tests/**/snapshots/**.snap",
   ".editorconfig",
@@ -14,6 +15,7 @@ path = [
   "dprint.json",
   "mob.toml",
   "AGENTS.md",
+  "CONTRIBUTING.md",
   "README.md",
   "Cargo.lock",
 ]
