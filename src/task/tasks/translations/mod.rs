@@ -357,7 +357,8 @@ impl Taskable for TranslationsTask {
     }
 
     fn enabled(&self, ctx: &TaskContext) -> bool {
-        ctx.config().transifex.enabled
+        // Translations must be both config-enabled AND have transifex enabled
+        ctx.config().task_config(&self.name).enabled && ctx.config().transifex.enabled
     }
 
     fn do_clean<'a>(&'a self, ctx: &'a TaskContext) -> BoxFuture<'a, Result<()>> {

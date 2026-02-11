@@ -19,6 +19,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Dispatch `translations` and `installer` to their correct task types (`TranslationsTask`, `InstallerTask`) instead of falling through to the catch-all `ModOrganizerTask` which tried to git-clone nonexistent repos
 - Skip built-in task names in `register_config_tasks()` to prevent them from getting spurious `modorganizer-*` prefix aliases
 - Add Transifex CLI (`tx`) to README.md prerequisites
+- `InstallerTask::enabled()` now checks `task_config().enabled` instead of being hardcoded to `cfg!(windows)` — respects `[tasks.installer].enabled = false`
+- `TranslationsTask::enabled()` now checks both `task_config().enabled` and `transifex.enabled` — respects `[tasks.translations].enabled = false`
+- Register all ~30 default `modorganizer-*` sub-projects (matching C++ mob's `add_tasks()` in `main.cpp`) so they are cloned during `mob build`
+- Build tasks in 7 sequential groups with parallel execution within each group, matching C++ mob's dependency ordering exactly
 
 ### Added
 

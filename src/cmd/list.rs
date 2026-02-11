@@ -6,7 +6,7 @@
 //! List command implementation for mob-rs.
 
 use crate::cli::build::ListArgs;
-use crate::cmd::build::{BUILTIN_TASKS, register_config_tasks};
+use crate::cmd::build::{BUILTIN_TASKS, register_config_tasks, register_default_projects};
 use crate::config::Config;
 use crate::error::Result;
 use crate::task::registry::TaskRegistry;
@@ -30,7 +30,9 @@ pub fn run_list_command(args: &ListArgs, config: &Config) -> Result<()> {
 
     let mut registry = TaskRegistry::new(config.aliases.clone());
     register_config_tasks(&mut registry, config);
+    register_default_projects(&mut registry);
     registry.register_all(BUILTIN_TASKS.iter().map(std::string::ToString::to_string));
+    registry.register("organizer".to_string());
 
     let tasks_to_list = if args.all && !args.tasks.is_empty() {
         match registry.resolve(&args.tasks) {

@@ -371,9 +371,9 @@ impl Taskable for InstallerTask {
         &self.name
     }
 
-    fn enabled(&self, _ctx: &TaskContext) -> bool {
-        // Installer is only available on Windows
-        cfg!(windows)
+    fn enabled(&self, ctx: &TaskContext) -> bool {
+        // Installer must be both config-enabled AND on Windows
+        ctx.config().task_config(&self.name).enabled && cfg!(windows)
     }
 
     fn do_clean<'a>(&'a self, ctx: &'a TaskContext) -> BoxFuture<'a, Result<()>> {
