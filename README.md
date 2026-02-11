@@ -7,6 +7,7 @@ If you want to contribute to a single plugin of MO2 or even write your own plugi
 ## Table of contents
 
 - [Quick start](#quick-start)
+  - [Building from source](#building-from-source)
 - [Prerequisites](#prerequisites)
   - [Qt installation](#qt-installation)
   - [Visual Studio](#visual-studio)
@@ -38,6 +39,14 @@ If you want to contribute to a single plugin of MO2 or even write your own plugi
   - [`inis`](#inis)
 
 ## Quick start
+
+Download the latest release from [GitHub Releases](https://github.com/romeoahmed/mob-rs/releases), extract `mob.exe` and `mob.toml` into the same directory, then:
+
+```powershell
+mob -d C:\dev\modorganizer build
+```
+
+### Building from source
 
 ```powershell
 # install Rust 1.92.0+ (https://rustup.rs)
