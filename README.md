@@ -10,6 +10,8 @@ If you want to contribute to a single plugin of MO2 or even write your own plugi
 - [Prerequisites](#prerequisites)
   - [Qt installation](#qt-installation)
   - [Visual Studio](#visual-studio)
+  - [Python](#python)
+  - [7-Zip](#7-zip)
 - [Changing options](#changing-options)
   - [TOML files](#override-options-using-toml-files)
   - [Environment variables](#override-options-using-environment-variables)
@@ -99,6 +101,16 @@ aqt install-qt --outputdir "C:\Qt" windows desktop ${QT_VERSION} win64_msvc2022_
     - C++ Build Tools core features
     - Git for Windows
     - CMake tools for Windows
+
+### Python
+
+- Install [Python 3.12](https://www.python.org/downloads/) (required by PyQt, sip, and other MO2 build dependencies)
+  - Make sure to check **Add python.exe to PATH** during installation
+
+### 7-Zip
+
+- Install [7-Zip](https://www.7-zip.org/) (used to extract and create archives)
+  - Make sure `7z.exe` is in your PATH, or set the path in `mob.toml` under `[tools]`
 
 ## Changing options
 
