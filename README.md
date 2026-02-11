@@ -13,6 +13,7 @@ If you want to contribute to a single plugin of MO2 or even write your own plugi
   - [Visual Studio](#visual-studio)
   - [Python](#python)
   - [7-Zip](#7-zip)
+  - [Transifex CLI (optional)](#transifex-cli-optional)
 - [Changing options](#changing-options)
   - [TOML files](#override-options-using-toml-files)
   - [Environment variables](#override-options-using-environment-variables)
@@ -120,6 +121,12 @@ aqt install-qt --outputdir "C:\Qt" windows desktop ${QT_VERSION} win64_msvc2022_
 
 - Install [7-Zip](https://www.7-zip.org/) (used to extract and create archives)
   - Make sure `7z.exe` is in your PATH, or set the path in `mob.toml` under `[tools]`
+
+### Transifex CLI (optional)
+
+- Install the [Transifex CLI](https://github.com/transifex/cli) (`tx`) if you need to pull translations
+  - Make sure `tx` is in your PATH, or set the path in `mob.toml` under `[tools]`
+  - Set the `TX_TOKEN` environment variable or configure `transifex.key` in `mob.toml`
 
 ## Changing options
 

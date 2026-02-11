@@ -13,9 +13,11 @@ use crate::error::Result;
 use crate::task::manager::TaskManager;
 use crate::task::registry::TaskRegistry;
 use crate::task::tasks::explorerpp::ExplorerPPTask;
+use crate::task::tasks::installer::InstallerTask;
 use crate::task::tasks::licenses::LicensesTask;
 use crate::task::tasks::modorganizer::ModOrganizerTask;
 use crate::task::tasks::stylesheets::StylesheetsTask;
+use crate::task::tasks::translations::TranslationsTask;
 use crate::task::tasks::usvfs::UsvfsTask;
 use crate::task::{CleanFlags, Task};
 
@@ -106,6 +108,12 @@ pub(crate) fn register_config_tasks(registry: &mut TaskRegistry, config: &Config
             continue;
         }
 
+        // Skip built-in task names — they have their own task types and should
+        // not be registered as modorganizer-* repos.
+        if BUILTIN_TASKS.contains(&name.as_str()) {
+            continue;
+        }
+
         registry.register(name.clone());
         if let Some(short) = name.strip_prefix("modorganizer-") {
             registry.register(short.to_string());
@@ -143,6 +151,8 @@ fn task_from_name(name: String) -> Task {
         "stylesheets" | "ss" => Task::Stylesheets(StylesheetsTask::new()),
         "explorerpp" | "explorer++" => Task::ExplorerPP(ExplorerPPTask::new()),
         "licenses" => Task::Licenses(LicensesTask::new()),
+        "translations" => Task::Translations(TranslationsTask::new()),
+        "installer" => Task::Installer(InstallerTask::new()),
         _ => Task::ModOrganizer(ModOrganizerTask::new(name)),
     }
 }

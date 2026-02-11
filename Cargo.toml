@@ -63,7 +63,7 @@ indicatif = "0.18.3"
 reqwest = { version = "0.13.2", features = ["json", "stream"] }
 
 # Git
-gix = { version = "0.78.0", default-features = false, features = ["index", "status", "revision"] }
+gix = { version = "0.79.0", default-features = false, features = ["index", "status", "revision"] }
 
 # Process management
 which = "8.0"

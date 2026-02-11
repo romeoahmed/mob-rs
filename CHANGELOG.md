@@ -16,6 +16,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Normalize all `PathsConfig` fields via `components().collect()` to eliminate mixed `/` and `\` separators
 - Skip alias names (e.g., `"super"`, `"plugins"`) in task registration — they are config override scopes, not actual buildable tasks
 - Expand alias-based config overrides: `[tasks.super]` now correctly applies to all tasks matched by the `super` alias's target patterns (mirrors C++ mob's `[super:task]` semantics)
+- Dispatch `translations` and `installer` to their correct task types (`TranslationsTask`, `InstallerTask`) instead of falling through to the catch-all `ModOrganizerTask` which tried to git-clone nonexistent repos
+- Skip built-in task names in `register_config_tasks()` to prevent them from getting spurious `modorganizer-*` prefix aliases
+- Add Transifex CLI (`tx`) to README.md prerequisites
 
 ### Added
 
