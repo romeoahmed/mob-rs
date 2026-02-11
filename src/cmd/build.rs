@@ -102,7 +102,7 @@ pub(crate) fn register_config_tasks(registry: &mut TaskRegistry, config: &Config
         registry.register(name.clone());
         if let Some(short) = name.strip_prefix("modorganizer-") {
             registry.register(short.to_string());
-        } else {
+        } else if name != "modorganizer" {
             registry.register(format!("modorganizer-{name}"));
         }
     }

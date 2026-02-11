@@ -27,7 +27,7 @@ fn test_ctx(config: Arc<Config>) -> TaskContext {
 
 #[test]
 fn test_modorganizer_task_naming() {
-    let cases: Vec<_> = ["archive", "modorganizer-uibase"]
+    let cases: Vec<_> = ["archive", "modorganizer-uibase", "modorganizer"]
         .into_iter()
         .map(|input| {
             let task = ModOrganizerTask::new(input);

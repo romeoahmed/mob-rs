@@ -54,14 +54,14 @@ versions:
   ss_skyrim_trosski: v1.1
   ss_starfield_trosski: V1.11
 paths:
-  prefix: /build
-  cache: "/build\\downloads"
-  build: "/build\\build"
-  install: "/build\\install"
-  install_bin: "/build\\install\\bin"
-  install_installer: "/build\\install\\installer"
-  install_libs: "/build\\install\\lib"
-  install_pdbs: "/build\\install\\pdb"
-  install_stylesheets: "/build\\install\\bin\\stylesheets"
-  install_licenses: "/build\\install\\bin\\licenses"
-  install_translations: "/build\\install\\bin\\translations"
+  prefix: "\\build"
+  cache: "\\build\\downloads"
+  build: "\\build\\build"
+  install: "\\build\\install"
+  install_bin: "\\build\\install\\bin"
+  install_installer: "\\build\\install\\installer"
+  install_libs: "\\build\\install\\lib"
+  install_pdbs: "\\build\\install\\pdb"
+  install_stylesheets: "\\build\\install\\bin\\stylesheets"
+  install_licenses: "\\build\\install\\bin\\licenses"
+  install_translations: "\\build\\install\\bin\\translations"

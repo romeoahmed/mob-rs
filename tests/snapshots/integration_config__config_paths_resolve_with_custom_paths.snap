@@ -54,14 +54,14 @@ versions:
   ss_skyrim_trosski: v1.1
   ss_starfield_trosski: V1.11
 paths:
-  prefix: /test/prefix
-  cache: /custom/cache
-  build: "/test/prefix\\build"
-  install: /custom/install
-  install_bin: "/custom/install\\bin"
-  install_installer: "/custom/install\\installer"
-  install_libs: "/custom/install\\lib"
-  install_pdbs: "/custom/install\\pdb"
-  install_stylesheets: "/custom/install\\bin\\stylesheets"
-  install_licenses: "/custom/install\\bin\\licenses"
-  install_translations: "/custom/install\\bin\\translations"
+  prefix: "\\test\\prefix"
+  cache: "\\custom\\cache"
+  build: "\\test\\prefix\\build"
+  install: "\\custom\\install"
+  install_bin: "\\custom\\install\\bin"
+  install_installer: "\\custom\\install\\installer"
+  install_libs: "\\custom\\install\\lib"
+  install_pdbs: "\\custom\\install\\pdb"
+  install_stylesheets: "\\custom\\install\\bin\\stylesheets"
+  install_licenses: "\\custom\\install\\bin\\licenses"
+  install_translations: "\\custom\\install\\bin\\translations"

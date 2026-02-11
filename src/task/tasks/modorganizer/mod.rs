@@ -61,7 +61,7 @@ impl ModOrganizerTask {
     /// The project name should be the short name (e.g., "archive" not "modorganizer-archive").
     pub fn new(name: impl Into<String>) -> Self {
         let name = name.into();
-        let repo_name = if name.starts_with("modorganizer-") {
+        let repo_name = if name == "modorganizer" || name.starts_with("modorganizer-") {
             name.clone()
         } else {
             format!("modorganizer-{name}")

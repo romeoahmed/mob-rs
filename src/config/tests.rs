@@ -126,6 +126,9 @@ prefix = "/test/path"
 "#;
 
     let config = Config::parse(toml).unwrap();
+    // Normalize path separators for cross-platform snapshot consistency
+    let normalize_path =
+        |p: &Option<PathBuf>| p.as_ref().map(|p| p.to_string_lossy().replace('\\', "/"));
     insta::assert_yaml_snapshot!(
         "config_parse",
         serde_json::json!({
@@ -133,7 +136,7 @@ prefix = "/test/path"
             "global.output_log_level": config.global.output_log_level.as_u8(),
             "task.mo_org": config.task.mo_org,
             "task.configuration": config.task.configuration.to_string(),
-            "paths.prefix": config.paths.prefix,
+            "paths.prefix": normalize_path(&config.paths.prefix),
         })
     );
 }

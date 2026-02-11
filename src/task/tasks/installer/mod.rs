@@ -91,7 +91,7 @@ impl InstallerTask {
     /// Build the git URL for the installer repository.
     fn git_url(config: &Config) -> String {
         format!(
-            "{}{}modorganizer-Installer.git",
+            "{}{}/modorganizer-Installer.git",
             config.task.git_url_prefix, config.task.mo_org
         )
     }

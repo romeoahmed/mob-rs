@@ -127,6 +127,30 @@ impl PathsConfig {
             resolve(&mut self.qt_translations, qt_install, "translations");
         }
 
+        // Normalize all paths to use consistent platform-native separators.
+        // This prevents mixed `/` and `\` when user-provided prefix uses `/`
+        // but `Path::join` inserts `\` on Windows.
+        let normalize = |path: &mut Option<PathBuf>| {
+            if let Some(p) = path {
+                *p = p.components().collect();
+            }
+        };
+        normalize(&mut self.prefix);
+        normalize(&mut self.cache);
+        normalize(&mut self.build);
+        normalize(&mut self.install);
+        normalize(&mut self.install_bin);
+        normalize(&mut self.install_installer);
+        normalize(&mut self.install_libs);
+        normalize(&mut self.install_pdbs);
+        normalize(&mut self.install_stylesheets);
+        normalize(&mut self.install_licenses);
+        normalize(&mut self.install_translations);
+        normalize(&mut self.vcpkg);
+        normalize(&mut self.qt_install);
+        normalize(&mut self.qt_bin);
+        normalize(&mut self.qt_translations);
+
         Ok(())
     }
 
