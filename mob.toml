@@ -117,7 +117,7 @@ enabled = false
 git_shallow = false
 
 [tasks.translations]
-enabled = true
+enabled = false
 
 # =============================================================================
 # Tool Paths
@@ -179,7 +179,7 @@ ss_fallout4_trosski = "v1.11"
 # Download cache (default: prefix/downloads)
 # cache = ""
 
-# Licenses directory
+# Licenses directory - REQUIRED
 # licenses = ""
 
 # Build directory (default: prefix/build)
