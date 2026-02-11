@@ -15,6 +15,7 @@ path = [
   "dprint.json",
   "mob.toml",
   "AGENTS.md",
+  "CHANGELOG.md",
   "CONTRIBUTING.md",
   "README.md",
   "Cargo.lock",
