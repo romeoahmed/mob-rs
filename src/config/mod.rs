@@ -125,8 +125,13 @@ impl Config {
 
     /// Get task configuration for a specific task.
     ///
-    /// Checks for task-specific overrides and falls back to the default.
-    /// Supports glob patterns in task names.
+    /// Resolution order:
+    /// 1. Exact match on task name (e.g., `[tasks.usvfs]`)
+    /// 2. Glob pattern match (e.g., `[tasks.installer_*]`)
+    /// 3. Alias expansion — if the task name matches any pattern in an alias's
+    ///    target list, and that alias has a `[tasks.<alias>]` override, it applies.
+    ///    (e.g., `[tasks.super]` applies to all tasks in the `super` alias group)
+    /// 4. Default `[task]` config
     #[must_use]
     pub fn task_config(&self, task_name: &str) -> TaskConfig {
         // Exact match
@@ -134,12 +139,34 @@ impl Config {
             return merge::merge_task_config(&self.task, config);
         }
 
-        // Glob pattern match
+        // Glob pattern match (non-alias entries only)
         for (pattern, config) in &self.tasks {
+            if self.aliases.contains_key(pattern) {
+                continue;
+            }
             if let Ok(glob) = wax::Glob::new(pattern)
                 && glob.is_match(task_name)
             {
                 return merge::merge_task_config(&self.task, config);
+            }
+        }
+
+        // Alias expansion: check if task_name matches any pattern in an alias's
+        // target list, and if that alias has a [tasks.<alias>] config override.
+        for (alias_name, alias_targets) in &self.aliases {
+            if let Some(config) = self.tasks.get(alias_name) {
+                for target_pattern in alias_targets {
+                    // Check exact match first
+                    if target_pattern == task_name {
+                        return merge::merge_task_config(&self.task, config);
+                    }
+                    // Then glob match
+                    if let Ok(glob) = wax::Glob::new(target_pattern)
+                        && glob.is_match(task_name)
+                    {
+                        return merge::merge_task_config(&self.task, config);
+                    }
+                }
             }
         }
 

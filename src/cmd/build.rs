@@ -99,6 +99,13 @@ fn compute_clean_flags(args: &BuildArgs) -> CleanFlags {
 
 pub(crate) fn register_config_tasks(registry: &mut TaskRegistry, config: &Config) {
     for name in config.tasks.keys() {
+        // Skip alias names (e.g., "super", "plugins") — they are config override
+        // scopes, not actual buildable tasks. In C++ mob, `[super:task]` applies
+        // overrides to all tasks in the `super` alias group.
+        if config.aliases.contains_key(name) {
+            continue;
+        }
+
         registry.register(name.clone());
         if let Some(short) = name.strip_prefix("modorganizer-") {
             registry.register(short.to_string());
