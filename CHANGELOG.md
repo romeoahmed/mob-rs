@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.1.0] - 2026-02-06
 
+### Fixed
+
+- Prevent `modorganizer-modorganizer` repo name duplication when task name is exactly `"modorganizer"`
+- Add missing `/` separator in `InstallerTask::git_url()` (was producing `ModOrganizer2modorganizer-Installer.git`)
+- Normalize all `PathsConfig` fields via `components().collect()` to eliminate mixed `/` and `\` separators
+- Skip alias names (e.g., `"super"`, `"plugins"`) in task registration — they are config override scopes, not actual buildable tasks
+- Expand alias-based config overrides: `[tasks.super]` now correctly applies to all tasks matched by the `super` alias's target patterns (mirrors C++ mob's `[super:task]` semantics)
+
 ### Added
 
 - Complete Rust port of the [C++ mob](https://github.com/ModOrganizer2/mob) build tool for ModOrganizer2
